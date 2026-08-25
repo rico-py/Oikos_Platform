@@ -31,6 +31,8 @@ Il sito è compilato con contenuti segnaposto, chiaramente marcati nel codice. P
 - [ ] 2-3 recensioni reali (con permesso del cliente)
 - [ ] Social/contatti aggiuntivi, se presenti (Instagram, Facebook, ecc.)
 - [ ] P.IVA in footer
+- [ ] Dominio reale al posto di `https://esempio.it/` in `index.html` (canonical, Open Graph, Twitter card), `robots.txt` e `sitemap.xml`
+- [ ] Immagine social `assets/img/og-image.jpg` (1200x630) e favicon definitivo (ora un segnaposto minimo in `assets/img/favicon.svg`)
 
 ## Deploy
 
