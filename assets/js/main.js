@@ -1,8 +1,42 @@
 // Menu mobile
 const burger = document.getElementById('burgerBtn');
 const mobileMenu = document.getElementById('mobileMenu');
-burger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+const menuLinks = mobileMenu.querySelectorAll('a');
+
+function openMenu(){
+  mobileMenu.classList.add('open');
+  burger.setAttribute('aria-expanded', 'true');
+  menuLinks[0]?.focus();
+}
+function closeMenu(){
+  mobileMenu.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
+}
+
+burger.addEventListener('click', () => {
+  mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
+});
+menuLinks.forEach(a => a.addEventListener('click', closeMenu));
+
+// Chiudi con Esc e intrappola il focus dentro il menu quando è aperto (WAI-ARIA disclosure pattern)
+mobileMenu.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape'){
+    closeMenu();
+    burger.focus();
+    return;
+  }
+  if(e.key !== 'Tab') return;
+  const focusable = mobileMenu.querySelectorAll('a, button');
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if(e.shiftKey && document.activeElement === first){
+    e.preventDefault();
+    last.focus();
+  } else if(!e.shiftKey && document.activeElement === last){
+    e.preventDefault();
+    first.focus();
+  }
+});
 
 // Reveal on scroll
 const revealEls = document.querySelectorAll('.reveal');
