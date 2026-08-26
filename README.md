@@ -6,14 +6,17 @@ Sito vetrina one-page per la gelateria Oikos 2 (Via Franco Lucchini 12, Palermo)
 
 ```
 index.html
-netlify.toml
-_headers
+netlify.toml          ← config build/publish per Netlify
+_headers              ← security header (attivi solo su Netlify)
+robots.txt
+sitemap.xml
+README.md / PROJECT.md / ROADMAP.md
 assets/
-├── css/style.css
-├── css/fonts.css
-├── js/main.js
-├── fonts/
-└── img/
+├── css/style.css     ← grafica
+├── css/fonts.css     ← font self-hosted (Fraunces, Plus Jakarta Sans)
+├── js/main.js        ← struttura (menu mobile, badge orari, reveal on-scroll)
+├── fonts/            ← file .woff2
+└── img/              ← logo, favicon, foto
 ```
 
 ## Sviluppo locale
