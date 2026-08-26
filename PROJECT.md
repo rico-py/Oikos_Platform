@@ -87,14 +87,20 @@ CSS e JS separati dall'HTML (non inline) per poter lavorare in due senza sovrapp
 
 ## Cosa manca ancora (da chiedere al cliente/gelateria)
 
-- Nome reale della gelateria, logo, identità visiva (se esiste già)
-- Indirizzo, telefono, WhatsApp reali
-- Orari di apertura reali (anche stagionali, se cambiano)
-- Elenco gusti reali con descrizioni
-- Foto reali (vetrina, locale, gusti, laboratorio, team)
-- Link Google Maps / Google Business Profile reale da embeddare
-- 2-3 recensioni reali da mostrare (con permesso del cliente)
-- Social/contatti aggiuntivi (Instagram, Facebook, ecc. se li usano)
+Nome, indirizzo, telefono e logo sono ormai reali (Oikos 2, Via Franco Lucchini 12 Palermo, +39 091 595646 — verificati incrociando Google/RestaurantGuru/JustEat). Restano da confermare direttamente con il gestore:
+
+1. **Orari reali** per ogni giorno — online trovate 3 versioni diverse e in conflitto tra loro, non affidabile pubblicarne una a caso
+2. **WhatsApp**: il numero trovato è un fisso, non funziona con WhatsApp — esiste un cellulare/numero WhatsApp Business dedicato?
+3. **P.IVA** (non pubblica online)
+4. **Quale pagina Facebook è quella attiva** — trovati 2 URL diversi per quella che sembra la stessa attività
+5. **Link Glovo** esatto (confermato che ci sono, non trovato l'URL del profilo; JustEat già confermato)
+6. **Il menu trovato online è ancora aggiornato?** (vaschette, coni, coppette, brioche, crêpes, waffle, mignon/zatterini a peso, granite, frappè) — prezzi e voci ancora validi?
+7. **2-3 recensioni** da mostrare sul sito, con permesso esplicito (quelle trovate su Google sono reali ma troppo scarne da citare così come sono)
+8. **Foto reali**: vetrina, locale, gusti, laboratorio, team
+9. **Testo "chi siamo"**: storia, da quanti anni, cosa li rende diversi
+10. **Logo**: esiste una versione vettoriale (SVG/AI/PDF) oltre al PNG? E una versione adatta a sfondi scuri (bianca/monocromatica), per usarla anche nel footer?
+11. **Dominio**: ne hanno già uno in mente o registrato? (`gelateria-oikos-2.it` esiste ma è solo un redirect a JustEat, non un sito vero — lo controllano loro?)
+12. **Nome esatto**: "Oikos 2" ovunque va bene, o preferiscono richiamare la grafica del logo ("Oikos²")?
 
 ## Cose ancora da decidere come team
 
