@@ -1,6 +1,8 @@
-# Progetto: Sito Gelateria (nome provvisorio "Gelateria Sole")
+# Progetto: Sito Oikos 2 (gelateria, Palermo)
 
-Brief di progetto per riprendere il lavoro da Claude Code. Contiene contesto, decisioni prese finora e cosa manca.
+Brief di progetto per riprendere il lavoro da Claude Code. Contiene contesto e decisioni prese all'avvio del progetto.
+
+> **Questo documento descrive il brief iniziale ed è in gran parte storico** (es. "Gelateria Sole" era il nome segnaposto usato prima di conoscere quello reale). Per lo stato attuale del sito, cosa è già fatto e cosa manca, vedi [README.md](README.md) (checklist contenuti, SEO, sicurezza) e [ROADMAP.md](ROADMAP.md) (fasi e divisione compiti).
 
 ## Obiettivo
 
@@ -17,7 +19,7 @@ Progetto realizzato in due persone via repo Git condivisa.
 **One-page scrollabile**, non sito multi-pagina. Sezioni in ordine:
 1. Hero (nome, claim, badge aperto/chiuso in tempo reale)
 2. Chi siamo (storia breve)
-3. Gusti / menu (griglia gusti)
+3. Menu (categorie del menu + gusti gelato)
 4. Galleria foto
 5. Dove siamo (mappa + indirizzo) + Orari
 6. Recensioni
@@ -51,7 +53,7 @@ Elemento distintivo ("firma" del design): divisori a forma di goccia/onda tra le
 
 Da evitare: layout minimal-portfolio stile "coming soon" (visto come riferimento iniziale ma scartato: adatto a personal branding, non a un'attività locale che deve mostrare menu/orari/indirizzo subito).
 
-### Bozza già realizzata
+### Bozza già realizzata (storico — vedi nota in cima al file)
 Esiste già una prima bozza HTML statica (inline CSS/JS in un unico file) con tutte le sezioni sopra, contenuti interamente **segnaposto** (nome "Gelateria Sole", indirizzo, telefono, testi, gusti, recensioni tutti fittizi e chiaramente marcati da sostituire). Include già:
 - Dati strutturati `schema.org/IceCreamShop` nel `<head>` (da compilare con dati reali)
 - Badge orario aperto/chiuso funzionante via JS
@@ -63,26 +65,29 @@ Questa bozza va **riorganizzata in file separati** (vedi struttura sotto) e poi 
 
 ## Struttura repo concordata
 
+Struttura effettiva attuale (vedi [README.md](README.md) per la versione sempre aggiornata):
+
 ```
-nome-repo/
+Oikos_Platform/
 ├── index.html
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── main.js
-│   └── img/
-├── README.md
-└── .gitignore
+├── netlify.toml
+├── _headers
+├── README.md / PROJECT.md / ROADMAP.md
+├── .gitignore
+└── assets/
+    ├── css/ (style.css, fonts.css)
+    ├── js/ (main.js)
+    ├── fonts/
+    └── img/
 ```
 
 CSS e JS separati dall'HTML (non inline) per poter lavorare in due senza sovrapporsi sugli stessi file.
 
 ## Workflow di squadra
 
-- Repo già creata dal collaboratore, io (secondo membro) verrò aggiunto come **Collaborator** su GitHub
-- Un branch per modifica/feature (es. `feature/contenuti`, `feature/stile`), poi Pull Request verso `main`
-- Deploy automatico consigliato via **Netlify** o **Vercel** collegato alla repo: ogni push su `main` pubblica il sito, ogni PR genera un link di anteprima
+- Repo creata da rico-py (owner), Claudio aggiunto come **Collaborator** su GitHub con permessi write
+- Un branch per modifica/feature (es. `feature/seo-struttura`, futuro `feature/stile`), poi Pull Request verso `main`
+- Deploy automatico via **Netlify** (deciso, non Vercel): config già in `netlify.toml`, collegamento dall'interfaccia Netlify ancora da fare (deve farlo rico-py, è owner del repo — vedi ROADMAP.md Fase 0)
 - Editor consigliato: VS Code con estensione **Live Server** per vedere le modifiche in tempo reale senza build step
 
 ## Cosa manca ancora (da chiedere al cliente/gelateria)
@@ -111,8 +116,4 @@ Nome, indirizzo, telefono e logo sono ormai reali (Oikos 2, Via Franco Lucchini 
 
 ## Prossimi passi tecnici
 
-1. Impostare la struttura di cartelle sopra nella repo
-2. Spezzare la bozza HTML esistente in `index.html` + `style.css` + `main.js`
-3. Scrivere il `README.md` con checklist dei contenuti da sostituire
-4. Collegare Netlify/Vercel per il deploy automatico
-5. Sostituire i contenuti man mano che arrivano dal cliente
+I passi iniziali (struttura cartelle, split bozza, README) sono fatti. Per lo stato attuale e i prossimi passi vedi le fasi in [ROADMAP.md](ROADMAP.md).

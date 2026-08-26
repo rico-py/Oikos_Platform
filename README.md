@@ -25,7 +25,7 @@ Apri `index.html` con l'estensione **Live Server** di VS Code (tasto destro → 
 Il sito è compilato con contenuti segnaposto, chiaramente marcati nel codice. Prima della pubblicazione va sostituito tutto quanto segue:
 
 - [x] Nome reale: **Oikos 2** (verificato su Google/RestaurantGuru/JustEat)
-- [x] Logo reale in `assets/img/logo.png`, usato in nav; favicon ritagliato dal logo in `assets/img/logo-icon.png` → rifinitura del crop e versione per sfondi scuri (footer) a cura della grafica (Fase 2)
+- [x] Logo reale in `assets/img/logo.png` (versione master, usata per `og:image`/schema.org); `assets/img/logo-nav.png` è un ritaglio senza il margine bianco, usato in nav (il file originale schiacciato a 34px era illeggibile); favicon ritagliato in `assets/img/logo-icon.png` → rifinitura del crop e versione per sfondi scuri (footer) a cura della grafica (Fase 2)
 - [x] Indirizzo reale: Via Franco Lucchini 12, 90128 Palermo
 - [x] Telefono reale: +39 091 595646 (fisso — **non funziona con WhatsApp**, chiedere al cliente se hanno un numero mobile dedicato)
 - [x] Dati strutturati `schema.org/IceCreamShop`: nome/indirizzo/telefono aggiornati; orari e foto ancora segnaposto

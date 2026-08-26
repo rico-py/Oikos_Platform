@@ -29,7 +29,8 @@ File di competenza già separati bene per questo split: `index.html` + `assets/j
 - [x] Self-hosting dei font (Fraunces + Plus Jakarta Sans) in `assets/fonts/` + `assets/css/fonts.css`, rimosso il link a Google Fonts CDN — PR #2
 - [x] Security header via `_headers` (Netlify) + `rel="noopener noreferrer"` sui link esterni + font self-hosted per non esporre l'IP dei visitatori a Google — PR #2
 - [x] SEO locale arricchita: `geo` (coordinate reali), `servesCuisine` (categorie menu), `hasMap`, `sameAs` (JustEat) — PR #2. NAP coerente tra Google/Facebook/JustEat/Glovo resta da verificare (fuori dal codice, vedi README)
-- [x] Sezione Menu ristrutturata: la griglia principale mostra le 6 categorie (gelato, granite, brioche, crepes, frappè, caffetteria) invece dei soli gusti gelato; rinominato "Gusti"→"Menu" ovunque — PR #2
+- [x] Sezione Menu ristrutturata: la griglia principale mostra le 6 categorie confermate da un menu reale trovato online (gelato, granite, brioche, crêpes e waffle, dolci a peso, frappè e bevande) invece dei soli gusti gelato; rinominato "Gusti"→"Menu" ovunque — PR #2
+- [x] Fix logo navbar quasi invisibile: `logo.png` ha enorme margine bianco, schiacciato a 34px il disegno spariva — creato `assets/img/logo-nav.png` ritagliato sul contenuto reale, altezza nav portata a 40px — PR #2
 
 ## Fase 2 — Fondamenta grafica 🎨
 
