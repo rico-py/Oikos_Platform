@@ -139,24 +139,7 @@ section{position:relative;}
 .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
 
 .hero-art{position:relative; height:440px; display:flex; align-items:flex-end; justify-content:center;}
-.cone{
-  width:120px; height:170px;
-  background:
-    repeating-linear-gradient(45deg, #E3A85A 0 8px, #D69544 8px 16px),
-    repeating-linear-gradient(-45deg, transparent 0 8px, rgba(0,0,0,0.06) 8px 16px);
-  clip-path:polygon(50% 100%, 0 0, 100% 0);
-  position:relative; z-index:1;
-  box-shadow:0 20px 30px -12px rgba(43,26,18,0.35);
-}
-.scoop{
-  width:150px; height:150px; border-radius:50%;
-  position:absolute; left:50%; transform:translateX(-50%);
-  box-shadow:inset -10px -14px 0 rgba(0,0,0,0.08), 0 14px 20px -10px rgba(43,26,18,0.3);
-}
-.scoop-1{background:var(--pistacchio); bottom:120px; z-index:4; width:170px; height:170px;}
-.scoop-2{background:var(--limone); bottom:225px; z-index:3; width:150px; height:150px;}
-.scoop-3{background:var(--lampone); bottom:320px; z-index:2; width:130px; height:130px;}
-.sprinkle{position:absolute; border-radius:2px;}
+.hero-photo{width:280px; max-width:80vw; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); display:block;}
 .float-badge{
   position:absolute; background:var(--panna); border:1px solid var(--line);
   border-radius:16px; padding:10px 14px; box-shadow:var(--shadow);

@@ -34,7 +34,7 @@ Il sito è compilato con contenuti segnaposto, chiaramente marcati nel codice. P
 - [x] Embed Google Maps reale al posto del box segnaposto
 - [ ] Testo della sezione "Chi siamo"
 - [ ] Descrizioni reali per le categorie del "Menu" e per i gusti gelato del momento
-- [ ] Foto reali: vetrina, locale, gusti, laboratorio, team (sezione "Galleria" + foto "Chi siamo")
+- [ ] Foto reali: vetrina, locale, gusti, laboratorio, team (sezione "Galleria" + foto "Chi siamo"). La foto nell'hero (`assets/img/hero-gelato.jpg`) è un segnaposto da Unsplash (licenza libera, uso commerciale consentito — credit: Kyle Hinkson), da sostituire con una foto reale di Oikos 2 appena disponibile
 - [ ] Recensioni reali: trovate alcune vere su Google (4/5, 312 recensioni) ma troppo scarne da citare così come sono e da pubblicare solo col permesso del cliente — chiedere direttamente 2-3 recensioni che il gestore vuole mostrare
 - [ ] Social/contatti aggiuntivi: esiste una pagina Facebook, verificare se è quella ufficiale e se va linkata; sono anche su Glovo e JustEat, valutare se aggiungere CTA di ordinazione
 - [ ] P.IVA in footer

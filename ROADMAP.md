@@ -33,7 +33,7 @@ File di competenza già separati bene per questo split: `index.html` + `assets/j
 
 ## Fase 2 — Fondamenta grafica 🎨
 
-- [ ] Rifinire le "scoop" del cone in hero (`.scoop`, `.cone` in style.css) — attualmente forme CSS pure, valutare se bastano o serve un'illustrazione/foto
+- [x] ~~Rifinire le "scoop" del cone in hero~~ → sostituite le forme CSS piatte con una foto reale (segnaposto Unsplash, licenza libera) trattata a card con bordo/ombra, vedi `.hero-photo`
 - [ ] Placeholder da sostituire visivamente quando arrivano asset reali: `.storia-photo` e `.gal-item` (box tratteggiati) → trattamento immagine reale con bordi/ombre coerenti
 - [x] ~~Design favicon~~ → fatto un ritaglio provvisorio del logo reale (`assets/img/logo-icon.png`, `favicon-32x32.png`/`favicon-16x16.png`), da rifinire: il crop cattura ancora un pezzo dello swoosh decorativo dietro la scritta
 - [ ] Logo su sfondo scuro (footer): `logo.png` ha sfondo bianco pieno, sul footer (`--choco` scuro) farebbe un riquadro bianco — serve una versione con sfondo trasparente o invertita per quel contesto
