@@ -26,7 +26,8 @@ File di competenza già separati bene per questo split: `index.html` + `assets/j
 - [x] Accessibilità JS: `aria-expanded`/`aria-controls` sul bottone `.burger`, focus trap sul menu mobile aperto, chiusura con Esc — PR #2, da mergiare
 - [ ] Strategia di caricamento immagini (`<picture>`/`srcset`, `loading="lazy"`): **rimandata alla Fase 3**, non ha senso costruirla prima di avere foto reali su cui basare formati/dimensioni
 - [ ] Verificare dati `schema.org/IceCreamShop` nel `<head>` di `index.html` — struttura già presente, va solo compilata quando arrivano i dati reali (Fase 3)
-- [ ] Valutare self-hosting dei font (Fraunces + Plus Jakarta Sans) invece del link a Google Fonts, per ridurre richieste esterne e migliorare performance/SEO mobile
+- [x] Self-hosting dei font (Fraunces + Plus Jakarta Sans) in `assets/fonts/` + `assets/css/fonts.css`, rimosso il link a Google Fonts CDN — PR #2
+- [x] Security header via `_headers` (Netlify) + `rel="noopener noreferrer"` sui link esterni + font self-hosted per non esporre l'IP dei visitatori a Google — PR #2
 - [x] SEO locale arricchita: `geo` (coordinate reali), `servesCuisine` (categorie menu), `hasMap`, `sameAs` (JustEat) — PR #2. NAP coerente tra Google/Facebook/JustEat/Glovo resta da verificare (fuori dal codice, vedi README)
 - [x] Sezione Menu ristrutturata: la griglia principale mostra le 6 categorie (gelato, granite, brioche, crepes, frappè, caffetteria) invece dei soli gusti gelato; rinominato "Gusti"→"Menu" ovunque — PR #2
 
@@ -67,6 +68,7 @@ Checklist contenuti già tracciata in [README.md](README.md). Ordine consigliato
 - [ ] Audit Lighthouse (performance, SEO, accessibilità) dopo l'inserimento delle foto reali
 - [ ] Validazione dati strutturati con Google Rich Results Test
 - [ ] Verifica badge aperto/chiuso con orari reali su più fusi orari del giorno (bordi 12:00/23:00/00:00)
+- [ ] Dopo il primo deploy Netlify: controllare la console del browser per violazioni CSP (l'unica origine esterna consentita è google.com per la mappa)
 - [ ] Cross-review finale: ognuno rilegge il lavoro dell'altro prima della PR verso `main`
 
 ## Fase 5 — Deploy e consegna

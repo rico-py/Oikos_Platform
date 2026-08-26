@@ -6,9 +6,13 @@ Sito vetrina one-page per la gelateria Oikos 2 (Via Franco Lucchini 12, Palermo)
 
 ```
 index.html
+netlify.toml
+_headers
 assets/
 ├── css/style.css
+├── css/fonts.css
 ├── js/main.js
+├── fonts/
 └── img/
 ```
 
@@ -46,6 +50,16 @@ Il sito copre solo una parte della local SEO. L'altra parte, spesso più pesante
 - [ ] Aggiungere Facebook e Glovo a `sameAs` nello schema.org quando si conferma quale pagina/profilo è quello attivo (trovate due URL Facebook diversi per la stessa attività, serve conferma)
 - [ ] Il dominio è ancora placeholder (`esempio.it`, in `url`/`image`/canonical/OG/robots/sitemap): finché il sito non è online su un dominio reale e indicizzabile, questo lavoro SEO non ha alcun effetto su Google
 
+## Sicurezza
+
+Sito statico senza backend/form/dati utente: i rischi "classici" (SQL injection, breach, auth) non si applicano. Fatto comunque:
+
+- [x] Font self-hosted (`assets/fonts/`) invece di Google Fonts CDN: niente più richieste esterne, l'IP dei visitatori non viene esposto a Google ad ogni caricamento pagina
+- [x] `rel="noopener noreferrer"` su tutti i link `target="_blank"` (WhatsApp, Google Maps)
+- [x] Security header via `_headers` (attivi solo su Netlify, non su un server statico locale): `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, `Content-Security-Policy`
+- [ ] Dopo il primo deploy su Netlify: aprire la console del browser e verificare che non ci siano violazioni CSP (l'unica origine esterna consentita è `https://www.google.com` per l'embed della mappa)
+- HTTPS: automatico e gratuito su Netlify, nessuna configurazione richiesta
+
 ## Deploy
 
-Netlify collegato alla repo (config in `netlify.toml`, publish directory `.`, nessun build command — sito statico): ogni push su `main` pubblica il sito, ogni Pull Request genera un link di anteprima automatico nei commenti.
+Netlify da collegare alla repo (config già pronta in `netlify.toml`, publish directory `.`, nessun build command — sito statico): una volta collegato, ogni push su `main` pubblica il sito, ogni Pull Request genera un link di anteprima automatico nei commenti.
