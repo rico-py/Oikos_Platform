@@ -1,6 +1,6 @@
-# Gelateria Sole (nome provvisorio)
+# Oikos 2
 
-Sito vetrina one-page per una gelateria locale. HTML + CSS + JS vanilla, nessun framework, nessun build step — vedi [PROJECT.md](PROJECT.md) per il brief completo (obiettivo, decisioni di design, workflow di squadra).
+Sito vetrina one-page per la gelateria Oikos 2 (Via Franco Lucchini 12, Palermo). HTML + CSS + JS vanilla, nessun framework, nessun build step — vedi [PROJECT.md](PROJECT.md) per il brief completo (obiettivo, decisioni di design, workflow di squadra).
 
 ## Struttura
 
@@ -20,19 +20,22 @@ Apri `index.html` con l'estensione **Live Server** di VS Code (tasto destro → 
 
 Il sito è compilato con contenuti segnaposto, chiaramente marcati nel codice. Prima della pubblicazione va sostituito tutto quanto segue:
 
-- [ ] Nome reale della gelateria, logo, identità visiva
-- [ ] Dati strutturati `schema.org/IceCreamShop` nel `<head>` di `index.html` (nome, indirizzo, telefono, orari)
-- [ ] Indirizzo, telefono, WhatsApp reali (compaiono in più punti: nav, sezione "Dove siamo", CTA finale, footer)
-- [ ] Orari di apertura reali, anche stagionali se cambiano (tabella orari + oggetto `orari` in `assets/js/main.js`)
+- [x] Nome reale: **Oikos 2** (verificato su Google/RestaurantGuru/JustEat)
+- [x] Logo reale in `assets/img/logo.png`, usato in nav; favicon ritagliato dal logo in `assets/img/logo-icon.png` → rifinitura del crop e versione per sfondi scuri (footer) a cura della grafica (Fase 2)
+- [x] Indirizzo reale: Via Franco Lucchini 12, 90128 Palermo
+- [x] Telefono reale: +39 091 595646 (fisso — **non funziona con WhatsApp**, chiedere al cliente se hanno un numero mobile dedicato)
+- [x] Dati strutturati `schema.org/IceCreamShop`: nome/indirizzo/telefono aggiornati; orari e foto ancora segnaposto
+- [ ] **Orari di apertura reali**: le fonti online sono in conflitto (chiuso lunedì + 9:30-01:00 il resto della settimana secondo RestaurantGuru/Google; 9:00-01:30 tutti i giorni secondo un altro aggregatore; 15:00-01:00 secondo un altro ancora) — da confermare direttamente col gestore prima di pubblicare, un badge "aperti ora" sbagliato è peggio di nessun badge
+- [ ] WhatsApp: confermare se esiste un numero mobile dedicato (quello fisso trovato online non funziona)
 - [ ] Embed Google Maps reale al posto del box segnaposto
 - [ ] Testo della sezione "Chi siamo"
 - [ ] Elenco gusti reali con descrizioni (sezione "Gusti")
 - [ ] Foto reali: vetrina, locale, gusti, laboratorio, team (sezione "Galleria" + foto "Chi siamo")
-- [ ] 2-3 recensioni reali (con permesso del cliente)
-- [ ] Social/contatti aggiuntivi, se presenti (Instagram, Facebook, ecc.)
+- [ ] Recensioni reali: trovate alcune vere su Google (4/5, 312 recensioni) ma troppo scarne da citare così come sono e da pubblicare solo col permesso del cliente — chiedere direttamente 2-3 recensioni che il gestore vuole mostrare
+- [ ] Social/contatti aggiuntivi: esiste una pagina Facebook, verificare se è quella ufficiale e se va linkata; sono anche su Glovo e JustEat, valutare se aggiungere CTA di ordinazione
 - [ ] P.IVA in footer
 - [ ] Dominio reale al posto di `https://esempio.it/` in `index.html` (canonical, Open Graph, Twitter card), `robots.txt` e `sitemap.xml`
-- [ ] Immagine social `assets/img/og-image.jpg` (1200x630) e favicon definitivo (ora un segnaposto minimo in `assets/img/favicon.svg`)
+- [ ] Immagine social dedicata 1200x630 (ora uso temporaneamente il logo intero come `og:image`)
 
 ## Deploy
 

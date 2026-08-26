@@ -32,23 +32,32 @@ File di competenza già separati bene per questo split: `index.html` + `assets/j
 
 - [ ] Rifinire le "scoop" del cone in hero (`.scoop`, `.cone` in style.css) — attualmente forme CSS pure, valutare se bastano o serve un'illustrazione/foto
 - [ ] Placeholder da sostituire visivamente quando arrivano asset reali: `.storia-photo` e `.gal-item` (box tratteggiati) → trattamento immagine reale con bordi/ombre coerenti
-- [ ] Transizione di apertura del menu mobile (oggi è istantanea via `display:flex`, valutare una transizione morbida)
-- [ ] Design favicon + immagine OG/social share (collegata ai meta tag della Fase 1)
+- [x] ~~Design favicon~~ → fatto un ritaglio provvisorio del logo reale (`assets/img/logo-icon.png`, `favicon-32x32.png`/`favicon-16x16.png`), da rifinire: il crop cattura ancora un pezzo dello swoosh decorativo dietro la scritta
+- [ ] Logo su sfondo scuro (footer): `logo.png` ha sfondo bianco pieno, sul footer (`--choco` scuro) farebbe un riquadro bianco — serve una versione con sfondo trasparente o invertita per quel contesto
+- [ ] Immagine social dedicata 1200x630 (ora `og:image`/`twitter:image` puntano temporaneamente al logo intero, non è il formato ideale)
 - [ ] Rifinitura responsive sotto i 380px (verificare hero-art e badge flottanti su schermi molto piccoli)
 - [ ] Eventuale galleria con lightbox/zoom per le foto reali (da valutare se serve o se la griglia semplice basta)
+
+### Polish/animazioni (revisione con skill `emil-design-eng`, filosofia Emil Kowalski)
+
+- [ ] **Menu mobile**: apertura/chiusura istantanea via `display:none/flex`, nessuna transizione. Tenere sempre `display:flex` e animare `opacity`/`transform` (parte da `translateY(-8px) scale(0.97); opacity:0`, non da `scale(0)`) con `visibility`+`pointer-events:none` da chiuso, `ease-out` ~200-250ms
+- [ ] **Bottoni**: `.btn:hover` esiste ma manca `:active` — aggiungere `transform:scale(0.97)` su `:active` per il feedback di pressione, specie su mobile dove l'hover non esiste
+- [ ] **Icona burger**: le 3 righe restano identiche quando il menu è aperto (`aria-expanded="true"` già disponibile in JS) — animarla in una X per indicare lo stato
+- [ ] **`.reveal` on-scroll**: usa `transition: ... ease` invece di `ease-out` — le entrate dovrebbero usare `ease-out` (parte veloce, feedback immediato)
+- [ ] **`.nav-inner{transition:padding .2s ease}`**: dichiarata ma nessuno script la attiva (nessuno shrink-on-scroll in main.js) — implementare l'effetto o rimuovere la regola morta
 
 ## Fase 3 — Integrazione contenuti reali 🏗️🎨 (insieme, dipende dal cliente)
 
 Checklist contenuti già tracciata in [README.md](README.md). Ordine consigliato una volta ricevuti i dati dal gelataio:
 
-1. Nome reale, logo, identità visiva → aggiorna title, meta, schema.org, footer
-2. Indirizzo/telefono/WhatsApp reali → compaiono in nav, sezione "Dove siamo", CTA finale, footer, schema.org
-3. Orari reali (anche stagionali) → oggetto `orari` in `main.js` + tabella in `index.html`
+1. [x] Nome reale (Oikos 2) e logo → fatto, verificato via web (Google/RestaurantGuru/JustEat) + logo fornito dal collega
+2. [x] Indirizzo/telefono reali (Via Franco Lucchini 12, Palermo — +39 091 595646) → fatto in nav, "Dove siamo", CTA finale, footer, schema.org. WhatsApp ancora da chiarire (il numero trovato è un fisso)
+3. Orari reali (anche stagionali) → **da confermare col gestore**, fonti online in conflitto tra loro, non affidabile scrivere un orario a caso
 4. Testo "Chi siamo" e descrizioni gusti
 5. Foto reali (vetrina, locale, gusti, laboratorio, team) → sostituiscono i placeholder tratteggiati
 6. Embed Google Maps reale al posto del box segnaposto
-7. 2-3 recensioni reali (con permesso del cliente)
-8. Social aggiuntivi, P.IVA in footer
+7. 2-3 recensioni reali scelte dal cliente (trovate recensioni Google reali ma troppo scarne/da usare solo con permesso esplicito)
+8. Social aggiuntivi (pagina Facebook trovata, da confermare se ufficiale; presenti anche su Glovo/JustEat), P.IVA in footer
 
 ## Fase 4 — QA prelancio
 
