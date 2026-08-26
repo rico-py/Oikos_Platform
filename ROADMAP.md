@@ -1,4 +1,4 @@
-# Roadmap — Gelateria Sole
+# Roadmap — Oikos 2
 
 Roadmap operativa per portare il sito da bozza segnaposto a consegna cliente. Vedi [PROJECT.md](PROJECT.md) per il brief e le decisioni di design/stack.
 
@@ -27,6 +27,8 @@ File di competenza già separati bene per questo split: `index.html` + `assets/j
 - [ ] Strategia di caricamento immagini (`<picture>`/`srcset`, `loading="lazy"`): **rimandata alla Fase 3**, non ha senso costruirla prima di avere foto reali su cui basare formati/dimensioni
 - [ ] Verificare dati `schema.org/IceCreamShop` nel `<head>` di `index.html` — struttura già presente, va solo compilata quando arrivano i dati reali (Fase 3)
 - [ ] Valutare self-hosting dei font (Fraunces + Plus Jakarta Sans) invece del link a Google Fonts, per ridurre richieste esterne e migliorare performance/SEO mobile
+- [x] SEO locale arricchita: `geo` (coordinate reali), `servesCuisine` (categorie menu), `hasMap`, `sameAs` (JustEat) — PR #2. NAP coerente tra Google/Facebook/JustEat/Glovo resta da verificare (fuori dal codice, vedi README)
+- [x] Sezione Menu ristrutturata: la griglia principale mostra le 6 categorie (gelato, granite, brioche, crepes, frappè, caffetteria) invece dei soli gusti gelato; rinominato "Gusti"→"Menu" ovunque — PR #2
 
 ## Fase 2 — Fondamenta grafica 🎨
 
@@ -53,9 +55,9 @@ Checklist contenuti già tracciata in [README.md](README.md). Ordine consigliato
 1. [x] Nome reale (Oikos 2) e logo → fatto, verificato via web (Google/RestaurantGuru/JustEat) + logo fornito dal collega
 2. [x] Indirizzo/telefono reali (Via Franco Lucchini 12, Palermo — +39 091 595646) → fatto in nav, "Dove siamo", CTA finale, footer, schema.org. WhatsApp ancora da chiarire (il numero trovato è un fisso)
 3. Orari reali (anche stagionali) → **da confermare col gestore**, fonti online in conflitto tra loro, non affidabile scrivere un orario a caso
-4. Testo "Chi siamo" e descrizioni gusti
+4. Testo "Chi siamo" e descrizioni reali per le categorie del Menu e per i gusti gelato (struttura già pronta, mancano solo i testi specifici)
 5. Foto reali (vetrina, locale, gusti, laboratorio, team) → sostituiscono i placeholder tratteggiati
-6. Embed Google Maps reale al posto del box segnaposto
+6. [x] Embed Google Maps reale al posto del box segnaposto → fatto (PR #2), verificare in produzione che non mostri il consenso cookie di Google al posto della mappa
 7. 2-3 recensioni reali scelte dal cliente (trovate recensioni Google reali ma troppo scarne/da usare solo con permesso esplicito)
 8. Social aggiuntivi (pagina Facebook trovata, da confermare se ufficiale; presenti anche su Glovo/JustEat), P.IVA in footer
 
