@@ -14,16 +14,17 @@ File di competenza già separati bene per questo split: `index.html` + `assets/j
 - [x] Split bozza monolitica in `index.html` + `assets/css` + `assets/js`
 - [x] README.md + PROJECT.md scritti
 - [x] Collaboratore aggiunto su GitHub con permessi write
-- [ ] 🏗️ Push del branch `main` su origin e impostazione come branch di default su GitHub (attualmente il default è `feature/setup-struttura` e `main` non esiste sul remoto — da correggere prima di aprire altre PR)
-- [ ] 🏗️ Decidere su `gelateria-sole.html` (bozza monolitica pre-split, ancora tracciata in root): eliminarla o tenerla come backup storico
+- [x] 🏗️ Push del branch `main` su origin e impostazione come branch di default su GitHub (fatto: `main` pushato, default cambiato da rico-py)
+- [x] 🏗️ Decidere su `gelateria-sole.html`: eliminato (PR #1, mergiata)
 - [ ] 🏗️ Collegare Netlify o Vercel al repo per deploy automatico su push a `main` + preview link sulle PR
+- [ ] Permessi admin su GitHub per Claudio (rimandato, non bloccante — write basta per il lavoro quotidiano)
 
 ## Fase 1 — Fondamenta struttura 🏗️
 
-- [ ] Meta tag: Open Graph (`og:title`, `og:description`, `og:image`), Twitter card, `canonical`, favicon
-- [ ] `robots.txt` e `sitemap.xml`
-- [ ] Accessibilità JS: `aria-expanded`/`aria-controls` sul bottone `.burger` (attualmente manca, il menu si apre ma senza stato annunciato agli screen reader), focus trap sul menu mobile aperto
-- [ ] Strategia di caricamento immagini per quando arrivano le foto reali: `<picture>`/`srcset`, `loading="lazy"` su galleria e "chi siamo"
+- [x] Meta tag: Open Graph, Twitter card, `canonical`, favicon segnaposto — PR #2, da mergiare
+- [x] `robots.txt` e `sitemap.xml` — PR #2, da mergiare (dominio placeholder `esempio.it`, aggiornare quando reale)
+- [x] Accessibilità JS: `aria-expanded`/`aria-controls` sul bottone `.burger`, focus trap sul menu mobile aperto, chiusura con Esc — PR #2, da mergiare
+- [ ] Strategia di caricamento immagini (`<picture>`/`srcset`, `loading="lazy"`): **rimandata alla Fase 3**, non ha senso costruirla prima di avere foto reali su cui basare formati/dimensioni
 - [ ] Verificare dati `schema.org/IceCreamShop` nel `<head>` di `index.html` — struttura già presente, va solo compilata quando arrivano i dati reali (Fase 3)
 - [ ] Valutare self-hosting dei font (Fraunces + Plus Jakarta Sans) invece del link a Google Fonts, per ridurre richieste esterne e migliorare performance/SEO mobile
 
