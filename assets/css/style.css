@@ -95,7 +95,7 @@ section{position:relative;}
   font-size:19px;
   display:flex; align-items:center; gap:8px;
 }
-.logo-img{height:34px; width:auto; display:block;}
+.logo-img{height:40px; width:auto; display:block;}
 .nav-links{display:flex; gap:28px; font-size:14.5px; font-weight:600;}
 .nav-links a{opacity:0.75; transition:opacity .15s;}
 .nav-links a:hover{opacity:1;}
