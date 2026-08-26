@@ -16,7 +16,7 @@ File di competenza già separati bene per questo split: `index.html` + `assets/j
 - [x] Collaboratore aggiunto su GitHub con permessi write
 - [x] 🏗️ Push del branch `main` su origin e impostazione come branch di default su GitHub (fatto: `main` pushato, default cambiato da rico-py)
 - [x] 🏗️ Decidere su `gelateria-sole.html`: eliminato (PR #1, mergiata)
-- [ ] 🏗️ Collegare Netlify o Vercel al repo per deploy automatico su push a `main` + preview link sulle PR
+- [ ] 🏗️ Collegare Netlify al repo per deploy automatico su push a `main` + preview link sulle PR — `netlify.toml` già pronto in repo, manca solo il collegamento dall'interfaccia Netlify (serve login/autorizzazione GitHub, vedi istruzioni in chat)
 - [ ] Permessi admin su GitHub per Claudio (rimandato, non bloccante — write basta per il lavoro quotidiano)
 
 ## Fase 1 — Fondamenta struttura 🏗️

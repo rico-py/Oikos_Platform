@@ -48,4 +48,4 @@ Il sito copre solo una parte della local SEO. L'altra parte, spesso più pesante
 
 ## Deploy
 
-Consigliato Netlify o Vercel collegato alla repo: ogni push su `main` pubblica il sito, ogni Pull Request genera un link di anteprima.
+Netlify collegato alla repo (config in `netlify.toml`, publish directory `.`, nessun build command — sito statico): ogni push su `main` pubblica il sito, ogni Pull Request genera un link di anteprima automatico nei commenti.
